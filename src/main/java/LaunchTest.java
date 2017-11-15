@@ -11,6 +11,7 @@ import java.util.List;
  */
 public class LaunchTest {
     public static void main(String[] args){
+        //script01();
         script02();
     }
    public static WebDriver initChromeDriver(){
@@ -49,8 +50,9 @@ public class LaunchTest {
            button.click();
            Thread.sleep(1000);
 
-          //WebElement dashboardLink = driver.findElement(By.id("tab-AdminDashboard"));
+           WebElement dashboardLink = driver.findElement(By.cssSelector("a.title"));
            List <WebElement> menuItems = driver.findElements(By.cssSelector("a.has_submenu"));
+           menuItems.set(0, dashboardLink);
            List <String> links = new ArrayList<String>();
            for (WebElement i: menuItems){
               links.add(i.getAttribute("href"));
@@ -70,7 +72,7 @@ public class LaunchTest {
                }
 
            }
-                     //menuItems.add(dashboardLink);
+                     //
          /*  for (int i = 0; i < 11; i++){
                menuItems.get(i).click();
                Thread.sleep(10000);
