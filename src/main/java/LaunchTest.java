@@ -72,15 +72,7 @@ public class LaunchTest {
                }
 
            }
-                     //
-         /*  for (int i = 0; i < 11; i++){
-               menuItems.get(i).click();
-               Thread.sleep(10000);
-               WebElement title = driver.findElement(By.className("page-title"));
-               System.out.println(title.getText());
-               /*driver.navigate().refresh();
-               Thread.sleep(1000);
-               } */
+       
        }
        catch (Exception e){
 
